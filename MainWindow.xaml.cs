@@ -24,28 +24,8 @@ namespace OrgaNICE
         {
             InitializeComponent();
 
-            var time = DateTime.Today;
-            var weekday = time.DayOfWeek;
-            DatumBox.Text = weekday + ", " + time.ToShortDateString();
-
-            //Binding binding1 = new Binding("Text");
-            //binding1.Source = DatumBox;
-            //DatumBox.SetBinding(TextBlock.TextProperty, binding1);
-        }
-
-        private void ButtonExit_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void ButtonZurueck_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ButtonVor_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
+            MainPage mainPage = new MainPage(); // Anzeigen von Hauptseite in Fenster
+            this.Content = mainPage;
         }
 
     }
