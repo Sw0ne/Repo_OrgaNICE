@@ -6,10 +6,12 @@
       xmlns:local="clr-namespace:OrgaNICE"
       mc:Ignorable="d" 
       Title="OrgaNICE" Height="600" Width="900">
-    <Grid>
+
+    <!-- GROSSES GRID / KOMPLETTE PAGE -->
+    <Grid> 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400*"/>
-            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="600*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -18,6 +20,7 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
+        <!-- GRID (TASKLEISTE) -->
         <Grid x:Name="GridTaskLeiste" Background="BurlyWood" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"  FontSize="18" Foreground="White" Text="OrgaNICE"/>
             <Button x:Name="ButtonExit" Width="25" Height="25" Margin="0,0,10,0" Background="Chocolate" Click="ButtonExit_Click" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="0">
@@ -25,6 +28,7 @@
             </Button>
         </Grid>
 
+        <!-- GRID (VOR UND ZURÜCK / DATUM) -->
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="Wheat">
             <Button x:Name="ButtonZurueck" Width="100" Height="25" Margin="10,0,0,0" Background="Chocolate" Click="ButtonZurueck_OnClick" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="0">
                 <TextBlock Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="&#10229;" FontSize="25" Foreground="White"/>
@@ -33,19 +37,47 @@
                 <TextBlock Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="&#10230;" FontSize="25" Foreground="White" />
             </Button>
             <TextBlock x:Name="DatumBox" Width="400" Height="40" Margin="0,0,0,0" TextAlignment="Center" FontSize="18" Foreground="Chocolate" Background="Transparent" Padding="7" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-
         </Grid>
 
+        <!-- GRID (MITTE / LINKS) -->
         <Grid Grid.Row="2" Grid.Column="0" Background="Cornsilk">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <!-- GRID (LINKS OBEN): KALENDER -->
+            <Grid Grid.Row="0" Grid.Column="0" Background="Cornsilk">
+                <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" >
+                    <Calendar x:Name="Calendar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="BurlyWood" BorderThickness="0" >
+                    </Calendar>
+                </Viewbox>
+            </Grid>
+            <!-- GRID (LINKS UNTEN): TERMINE EINZELN -->
+            <Grid Grid.Row="1" Grid.Column="0">
 
+            </Grid>
         </Grid>
 
+        <!-- GRID (MITTE / RECHTS) -->
         <Grid Grid.Row="2" Grid.Column="1" Background="Cornsilk">
+            <!-- GRID (RECHTS OBEN): TERMIN DETAILS -->
+            <Grid>
 
+            </Grid>
+            <!-- GRID (RECHTS UNTEN 1): TO-DO -->
+            <Grid>
+
+            </Grid>
+            <!-- GRID (RECHTS UNTEN 2): NOTIZEN -->
+            <Grid>
+
+            </Grid>
         </Grid>
 
-        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="Wheat">
-
-        </Grid>
+        <!-- GRID (LEISTE GANZ UNTEN) -->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="Wheat"/>
     </Grid>
 </Page>

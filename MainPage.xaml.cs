@@ -24,13 +24,13 @@ namespace OrgaNICE
         {
             InitializeComponent();
 
+            // Datum und Wochentag Anzeige
             var time = DateTime.Today;
             var weekday = time.DayOfWeek;
             DatumBox.Text = weekday + ", " + time.ToShortDateString();
 
-            //Binding binding1 = new Binding("Text");
-            //binding1.Source = DatumBox;
-            //DatumBox.SetBinding(TextBlock.TextProperty, binding1);
+            // Kalender-Datum Default = Heute
+            Calendar.SelectedDate = DateTime.Today;
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
