@@ -25,10 +25,9 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Red" Offset="0"/>
-                        <GradientStop Color="Blue" Offset="0.16"/>
-                        <GradientStop Color="Green" Offset="0.16"/>
-                        <GradientStop Color="Yellow" Offset="1"/>
+                        <GradientStop Color="Chocolate" Offset="0"/>
+                        <GradientStop Color="BurlyWood" Offset="0.25"/>
+                        <GradientStop Color="Wheat" Offset="1"/>
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -51,7 +50,7 @@
                     <ControlTemplate TargetType="{x:Type CalendarItem}">
                         <ControlTemplate.Resources>
                             <DataTemplate x:Key="{x:Static CalendarItem.DayTitleTemplateResourceKey}">
-                                <TextBlock Foreground="#FF333333" FontWeight="Bold" FontSize="9.5" FontFamily="Verdana" HorizontalAlignment="Center" Margin="0,6,0,6" Text="{Binding}" VerticalAlignment="Center"/>
+                                <TextBlock Foreground="Chocolate" FontWeight="Bold" FontSize="9.5" FontFamily="Verdana" HorizontalAlignment="Center" Margin="0,6,0,6" Text="{Binding}" VerticalAlignment="Center"/>
                             </DataTemplate>
                         </ControlTemplate.Resources>
                         <Grid x:Name="PART_Root">
@@ -79,7 +78,7 @@
                                                             <VisualState x:Name="Normal"/>
                                                             <VisualState x:Name="MouseOver">
                                                                 <Storyboard>
-                                                                    <ColorAnimation Duration="0" To="#FF73A9D8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path"/>
+                                                                    <ColorAnimation Duration="0" To="Chocolate" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path"/>
                                                                 </Storyboard>
                                                             </VisualState>
                                                             <VisualState x:Name="Disabled">
@@ -102,7 +101,7 @@
                                                             <VisualState x:Name="Normal"/>
                                                             <VisualState x:Name="MouseOver">
                                                                 <Storyboard>
-                                                                    <ColorAnimation Duration="0" To="#FF73A9D8" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path"/>
+                                                                    <ColorAnimation Duration="0" To="Chocolate" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path"/>
                                                                 </Storyboard>
                                                             </VisualState>
                                                             <VisualState x:Name="Disabled">
@@ -135,7 +134,7 @@
                                                             </VisualState>
                                                         </VisualStateGroup>
                                                     </VisualStateManager.VisualStateGroups>
-                                                    <ContentPresenter x:Name="buttonContent" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" TextElement.Foreground="#FF333333" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,4,1,9" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                                    <ContentPresenter x:Name="buttonContent" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" TextElement.Foreground="White" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,4,1,9" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                                 </Grid>
                                             </ControlTemplate>
                                         </Grid.Resources>
@@ -252,7 +251,7 @@
             <!-- GRID (LINKS OBEN): KALENDER -->
             <Grid Grid.Row="0" Grid.Column="0" Background="Cornsilk">
                 <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" >
-                    <Calendar x:Name="Calendar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Calendar x:Name="Calendar" Style="{DynamicResource CalendarStyle1}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     </Calendar>
                 </Viewbox>
             </Grid>
