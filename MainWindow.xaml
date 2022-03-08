@@ -6,6 +6,39 @@
         xmlns:local="clr-namespace:OrgaNICE"
         mc:Ignorable="d"
         Title="OrgaNICE" Height="600" Width="900" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-    </Window.Resources>
+
+    <!-- GROSSES GRID / KOMPLETTE PAGE -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- GRID (TASKLEISTE) -->
+        <Grid x:Name="GridTaskLeiste" Background="BurlyWood" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="18" Foreground="White" Text="OrgaNICE"/>
+            <Button x:Name="ButtonExit" Width="25" Height="25" Margin="0,0,10,0" Background="Chocolate" Click="ButtonExit_Click" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="0">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="❌" FontSize="17" Foreground="White"/>
+            </Button>
+        </Grid>
+
+        <!-- GRID (VOR UND ZURÜCK / DATUM) -->
+        <Grid x:Name="GridNavigationUndDatum" Grid.Row="1" Background="Wheat">
+            <Button x:Name="ButtonZurueck" Width="100" Height="26" Margin="10,0,0,0"  Background="Chocolate" Click="ButtonZurueck_OnClick" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="0">
+                <TextBlock Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="&#10229;" FontSize="25" Foreground="White"/>
+            </Button>
+            <Button x:Name="ButtonVor" Width="100" Height="26" Margin="0,0,10,0" Background="Chocolate" Click="ButtonVor_OnClick" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="0" Grid.Column="1">
+                <TextBlock Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="&#10230;" FontSize="25" Foreground="White" />
+            </Button>
+            <TextBlock x:Name="DatumBox" Width="400" Height="40" TextAlignment="Center" FontSize="18" Foreground="Chocolate" Background="Transparent" Padding="7" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.ColumnSpan="2"/>
+        </Grid>
+
+        <!-- FRAME / ANZEIGEKASTEN -->
+        <Frame x:Name="Anzeige" Grid.Row="2"/>
+
+    </Grid>
 </Window>

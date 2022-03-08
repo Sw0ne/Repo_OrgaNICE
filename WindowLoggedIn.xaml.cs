@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OrgaNICE
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for WindowLoggedIn.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class WindowLoggedIn : Window
     {
-        public MainPage()
+        public WindowLoggedIn()
         {
             InitializeComponent();
 
@@ -31,24 +30,25 @@ namespace OrgaNICE
 
             // Kalender-Datum Default = Heute
             Calendar.SelectedDate = DateTime.Today;
+
+            // Anzeigen von Hauptseite in Fenster
+            MainPage mainPage = new MainPage(); 
+            this.Content = mainPage;
+
+
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+
         }
 
-        private void ButtonZurueck_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonZurueck_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
-        private void ButtonVor_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void ButtonVor_Click(object sender, RoutedEventArgs e)
         {
 
         }
