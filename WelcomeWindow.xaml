@@ -1,0 +1,32 @@
+﻿<Window x:Class="OrgaNICE.WelcomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OrgaNICE"
+        mc:Ignorable="d"
+        Title="OrgaNICE" Height="600" Width="900" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <!-- GROSSES GRID / KOMPLETTE PAGE -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="900"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="565"/>
+        </Grid.RowDefinitions>
+
+        <!-- GRID (TASKLEISTE) -->
+        <Grid x:Name="GridTaskLeiste" Background="LightSlateGray" Grid.Row="0">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" Foreground="White" Text="OrgaNICE"/>
+            <Button x:Name="ButtonExit" Width="25" Height="25" Margin="0,0,10,0" Background="DarkSlateGray" Click="ButtonExit_Click" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="0">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="❌" FontSize="17" Foreground="White"/>
+            </Button>
+        </Grid>
+
+        <!-- FRAME / ANZEIGEKASTEN -->
+        <Frame x:Name="Anzeige" Grid.Row="2"/>
+
+    </Grid>
+</Window>

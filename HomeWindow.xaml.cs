@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace OrgaNICE
 {
     /// <summary>
-    /// Interaction logic for WindowLoggedIn.xaml
+    /// Interaction logic for HomeWindow.xaml
     /// </summary>
-    public partial class WindowLoggedIn : Window
+    public partial class HomeWindow : Window
     {
-        public WindowLoggedIn()
+        public HomeWindow()
         {
             InitializeComponent();
 
@@ -40,7 +40,7 @@ namespace OrgaNICE
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
 
         private void ButtonZurueck_Click(object sender, RoutedEventArgs e)

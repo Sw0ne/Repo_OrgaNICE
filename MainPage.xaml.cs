@@ -23,14 +23,6 @@ namespace OrgaNICE
         public MainPage()
         {
             InitializeComponent();
-
-            // Datum und Wochentag Anzeige
-            var time = DateTime.Today;
-            var weekday = time.DayOfWeek;
-            DatumBox.Text = weekday + ", " + time.ToShortDateString();
-
-            // Kalender-Datum Default = Heute
-            Calendar.SelectedDate = DateTime.Today;
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)

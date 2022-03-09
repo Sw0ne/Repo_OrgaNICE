@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace OrgaNICE
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WelcomeWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WelcomeWindow : Window
     {
-        public MainWindow() // Passiert wenn Objekt erstellt wird / Konstruktor
+        public WelcomeWindow() // Passiert wenn Objekt erstellt wird / Konstruktor
         {
             InitializeComponent();
 

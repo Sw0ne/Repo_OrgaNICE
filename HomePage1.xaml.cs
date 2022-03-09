@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace OrgaNICE
 {
     /// <summary>
-    /// Interaction logic for PageLoggedIn.xaml
+    /// Interaction logic for HomePage1.xaml
     /// </summary>
-    public partial class PageLoggedIn : Page
+    public partial class HomePage1 : Page
     {
-        public PageLoggedIn()
+        public HomePage1()
         {
             InitializeComponent();
+        }
+
+        private void TodoInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
