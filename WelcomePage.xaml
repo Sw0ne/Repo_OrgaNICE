@@ -1,0 +1,51 @@
+﻿<Page x:Class="OrgaNICE.WelcomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrgaNICE"
+      mc:Ignorable="d" 
+      d:DesignHeight="565" d:DesignWidth="900"
+      Title="WelcomePage">
+
+    <Grid>
+        <!-- GROSSES GRID / KOMPLETTE PAGE -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="900"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <!-- Logo -->
+        <Grid Grid.Row="0" Background="LightSteelBlue" >
+            <TextBlock Text="OrgaNICE" FontSize="200" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Impact"/>
+        </Grid>
+
+        <!-- Benutzername und Passwort -->
+        <Grid Grid.Row="1" Background="LightSteelBlue">
+            <TextBlock Height="20" Width="400" HorizontalAlignment="Center" Margin="255,10,245,205" Text="Benutzername" Foreground="DarkSlateGray" FontWeight="Bold" FontSize="14" Background="Transparent"/>
+            <TextBox Height="40" Width="400" HorizontalAlignment="Center" Margin="255,30,245,165" BorderThickness="0"/>
+
+            <TextBlock Height="20" Width="400" HorizontalAlignment="Center" Margin="255,75,245,140" Text="Passwort" Foreground="DarkSlateGray" FontWeight="Bold" FontSize="14" Background="Transparent"/>
+            <TextBox Height="40" Width="400" HorizontalAlignment="Center" Margin="255,95,245,100" BorderThickness="0" PasswordBox.PasswordChanged="TextBox_PasswordChanged"/>
+            
+            <Button x:Name="AnmeldeButton" Height="40" Width="200" Background="DarkSlateGray" HorizontalAlignment="Center" BorderThickness="0" Margin="350,150,350,45" Click="AnmeldeButton_Click">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Anmelden" FontSize="20" Foreground="White"/>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="2"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        
+        <!-- Kontaktdaten -->
+        <Grid Grid.Row="2" Background="LightSteelBlue">
+            <TextBlock Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Hilfe, ich habe meine Anmeldedaten vergessen und möchte diese ändern!" Foreground="DarkSlateGray" FontSize="14" Background="Transparent"/>
+        </Grid>
+
+    </Grid>
+</Page>

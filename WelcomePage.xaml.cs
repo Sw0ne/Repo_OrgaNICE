@@ -16,22 +16,25 @@ using System.Windows.Shapes;
 namespace OrgaNICE
 {
     /// <summary>
-    /// Interaction logic for WelcomeWindow.xaml
+    /// Interaction logic for WelcomePage.xaml
     /// </summary>
-    public partial class WelcomeWindow : Window
+    public partial class WelcomePage : Page
     {
-        public WelcomeWindow() // Passiert wenn Objekt erstellt wird / Konstruktor
+        public WelcomePage()
         {
             InitializeComponent();
-
-            //WelcomePage welcomePage = new WelcomePage(); // Anzeigen von Hauptseite (existiert noch nicht) in Fenster
-            //this.Content = welcomePage;
         }
 
-        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        private void TextBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            
+        }
+
+        private void AnmeldeButton_Click(object sender, RoutedEventArgs e)
+        {
+            HomeWindow homeWindow = new HomeWindow();
+            homeWindow.Show();
+            
         }
     }
-
 }
